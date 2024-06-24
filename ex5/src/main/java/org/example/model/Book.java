@@ -1,6 +1,7 @@
 package org.example.model;
 
 import jakarta.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "books")
@@ -21,12 +22,35 @@ public class Book {
     @Column(nullable = false)
     private Integer publicationYear;
 
+    @Column(columnDefinition = "TEXT")
     private String description;
 
     @Column(nullable = false)
-    private Double price;
+    private BigDecimal price;
 
     private Integer stockQuantity;
 
-    // Constructors, getters, and setters
+    private String coverImageUrl;
+
+    // Constructors
+
+    public Book() {
+    }
+
+    public Book(String title, String author, Integer publicationYear, BigDecimal price) {
+        this.title = title;
+        this.author = author;
+        this.publicationYear = publicationYear;
+        this.price = price;
+    }
+
+    // Existing getters and setters...
+
+    public String getCoverImageUrl() {
+        return coverImageUrl;
+    }
+
+    public void setCoverImageUrl(String coverImageUrl) {
+        this.coverImageUrl = coverImageUrl;
+    }
 }
