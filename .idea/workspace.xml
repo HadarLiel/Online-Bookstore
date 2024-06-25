@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50609bc9-6396-4cff-9f6c-2942ee5de79a" name="Changes" comment="start">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +98,7 @@
       <workItem from="1719224394526" duration="10949000" />
       <workItem from="1719245446179" duration="5889000" />
       <workItem from="1719300771167" duration="4134000" />
-      <workItem from="1719306341757" duration="2975000" />
+      <workItem from="1719306341757" duration="3359000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />
