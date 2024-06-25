@@ -26,14 +26,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/**"); // Allow access to all URLs
+        web.ignoring().antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/home", "/register").permitAll()
+                .antMatchers("/", "/home", "/register", "/login").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
