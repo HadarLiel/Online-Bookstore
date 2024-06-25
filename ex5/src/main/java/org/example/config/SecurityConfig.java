@@ -26,7 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**");
+        web.ignoring().antMatchers("/**"); // Allow access to static resources
     }
 
     @Override
@@ -34,12 +34,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/", "/home", "/register", "/login").permitAll()
+                .antMatchers("/cart").authenticated() // Restrict cart access to authenticated users
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login").permitAll()
+                .defaultSuccessUrl("/", true) // Redirect to home page after successful login
                 .and()
                 .logout()
-                .permitAll();
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/") // Redirect to home page after logout
+                .invalidateHttpSession(true)
+                .deleteCookies("JSESSIONID");
     }
 }
