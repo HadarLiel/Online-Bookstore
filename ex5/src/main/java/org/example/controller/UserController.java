@@ -11,8 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.validation.Valid;
-
+import jakarta.validation.Valid;  // Change this import
 @Controller
 public class UserController {
 
@@ -20,7 +19,7 @@ public class UserController {
     private UserRepository userRepository;
 
     @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+    private BCryptPasswordEncoder passwordEncoder;
 
     @GetMapping("/register")
     public String showRegistrationForm(Model model) {
@@ -34,13 +33,12 @@ public class UserController {
             return "register";
         }
 
-        // Check if user already exists
         if (userRepository.findByUsername(user.getUsername()) != null) {
             model.addAttribute("registrationError", "Username already exists.");
             return "register";
         }
 
-        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
         return "redirect:/login";
     }

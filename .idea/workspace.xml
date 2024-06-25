@@ -4,37 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50609bc9-6396-4cff-9f6c-2942ee5de79a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/PasswordEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/books.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/navbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/register.html" afterDir="false" />
+    <list default="true" id="50609bc9-6396-4cff-9f6c-2942ee5de79a" name="Changes" comment="start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/book-details.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/book-form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/book-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/book-details.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/book-form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/book-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,11 +97,24 @@
       <updated>1718630524880</updated>
       <workItem from="1718630526183" duration="4957000" />
       <workItem from="1719224394526" duration="10949000" />
-      <workItem from="1719245446179" duration="985000" />
+      <workItem from="1719245446179" duration="2610000" />
     </task>
+    <task id="LOCAL-00001" summary="start">
+      <option name="closed" value="true" />
+      <created>1719246758234</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719246758234</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="start" />
+    <option name="LAST_COMMIT_MESSAGE" value="start" />
   </component>
 </project>
