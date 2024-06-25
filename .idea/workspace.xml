@@ -7,11 +7,18 @@
     <list default="true" id="50609bc9-6396-4cff-9f6c-2942ee5de79a" name="Changes" comment="start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/BookStoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/BookStoreApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/repository/BookRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/BookServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/BookStoreApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/BookStoreApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/model/BookRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/service/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/service/BookServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +104,7 @@
       <updated>1718630524880</updated>
       <workItem from="1718630526183" duration="4957000" />
       <workItem from="1719224394526" duration="10949000" />
-      <workItem from="1719245446179" duration="2610000" />
+      <workItem from="1719245446179" duration="5889000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />

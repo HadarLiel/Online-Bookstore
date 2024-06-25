@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import jakarta.validation.Valid;  // Change this import
 @Controller
 public class UserController {
-
     @Autowired
     private UserRepository userRepository;
 
@@ -41,10 +40,5 @@ public class UserController {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
         return "redirect:/login";
-    }
-
-    @GetMapping("/login")
-    public String showLoginForm() {
-        return "login";
     }
 }

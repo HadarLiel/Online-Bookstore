@@ -13,20 +13,25 @@ public class Book {
     private Long id;
 
     @Column(nullable = false)
+    @NotEmpty(message = "Title is required")
     private String title;
 
     @Column(nullable = false)
+    @NotEmpty(message = "Author is required")
     private String author;
 
     private String publisher;
 
     @Column(nullable = false)
+    @NotNull(message = "Publication year is required")
     private Integer publicationYear;
 
     @Column(columnDefinition = "TEXT")
     private String description;
 
     @Column(nullable = false)
+    @NotNull(message = "Price is required")
+    @DecimalMin(value = "0.0", inclusive = false, message = "Price must be greater than zero")
     private BigDecimal price;
 
     private Integer stockQuantity;
