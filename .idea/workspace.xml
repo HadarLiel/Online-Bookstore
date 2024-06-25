@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50609bc9-6396-4cff-9f6c-2942ee5de79a" name="Changes" comment="start">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/templates/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +107,7 @@
       <workItem from="1719300771167" duration="4134000" />
       <workItem from="1719306341757" duration="17002000" />
       <workItem from="1719329587232" duration="1379000" />
-      <workItem from="1719332209020" duration="2587000" />
+      <workItem from="1719332209020" duration="2935000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />
