@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "books") // Ensure table name matches what you want in your database
+@Table(name = "books")
 public class Books {
 
     @Id
@@ -29,9 +29,11 @@ public class Books {
     @Column(name = "stock_quantity", nullable = false)
     private int stockQuantity;
 
-    // Additional fields as per your database schema
     @Column(name = "added_date", nullable = false)
     private LocalDateTime addedDate;
+
+    @Column(nullable = false, length = 1000) // Adjust length based on your description's requirements
+    private String description;
 
     // Constructors
     public Books() {
@@ -39,13 +41,14 @@ public class Books {
     }
 
     public Books(String title, String coverImageUrl, String author, double price, int publicationYear,
-                int stockQuantity) {
+                 int stockQuantity, String description) {
         this.title = title;
         this.coverImageUrl = coverImageUrl;
         this.author = author;
         this.price = price;
         this.publicationYear = publicationYear;
         this.stockQuantity = stockQuantity;
+        this.description = description;
         this.addedDate = LocalDateTime.now(); // Initialize addedDate with current date/time
     }
 
@@ -66,12 +69,20 @@ public class Books {
         this.title = title;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public String getCoverImageUrl() {
+        return coverImageUrl;
+    }
+
+    public void setCoverImageUrl(String coverImageUrl) {
+        this.coverImageUrl = coverImageUrl;
     }
 
     public String getAuthor() {
         return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public double getPrice() {
@@ -98,14 +109,6 @@ public class Books {
         this.stockQuantity = stockQuantity;
     }
 
-    public String getCoverImageUrl() {
-        return coverImageUrl;
-    }
-
-    public void setCoverImageUrl(String coverImageUrl) {
-        this.coverImageUrl = coverImageUrl;
-    }
-
     public LocalDateTime getAddedDate() {
         return addedDate;
     }
@@ -114,20 +117,27 @@ public class Books {
         this.addedDate = addedDate;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     // toString() method (optional but recommended for logging and debugging)
     @Override
     public String toString() {
-        return "Book{" +
+        return "Books{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", coverImageUrl='" + coverImageUrl + '\'' +
-                ", author='" + author + '\''+
+                ", author='" + author + '\'' +
                 ", price=" + price +
                 ", publicationYear=" + publicationYear +
                 ", stockQuantity=" + stockQuantity +
                 ", addedDate=" + addedDate +
+                ", description='" + description + '\'' +
                 '}';
     }
-
-
 }

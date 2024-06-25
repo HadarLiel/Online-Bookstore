@@ -18,17 +18,38 @@
     <!-- Iterate over each book and create a card -->
     <div th:each="book : ${books}" class="col">
       <div class="card h-100">
-        <img th:if="${book.coverImageUrl}" th:src="@{/TheMost.png}" class="card-img-top" alt="Book Cover">
+        <img th:if="${book.coverImageUrl}" th:src="@{/images/{imageName}(imageName=${book.coverImageUrl})}" class="card-img-top" alt="Book Cover">
         <div class="card-body">
           <h5 class="card-title" th:text="${book.title}"></h5>
           <p class="card-text" th:text="${'Author: ' + book.author}"></p>
           <p class="card-text" th:text="${'Price: $' + book.price}"></p>
-          <a th:href="@{/books/{id}(id=${book.id})}" class="btn btn-primary">View Details</a>
-          <a th:href="@{/books/{id}(id=${book.id})}" class="btn btn-primary">Add to cart</a>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" th:data-bs-target="'#descriptionModal-' + ${book.id}">View Details</button>
+          <form th:action="@{/cart/add/{id}(id=${book.id})}" method="post">
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Bootstrap Modals for Book Descriptions -->
+<div th:each="book : ${books}">
+  <div class="modal fade" th:id="'descriptionModal-' + ${book.id}" tabindex="-1" aria-labelledby="descriptionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="descriptionModalLabel" th:text="${book.title}"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p th:text="${book.description}"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

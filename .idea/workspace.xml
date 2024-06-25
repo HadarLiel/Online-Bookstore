@@ -6,14 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="50609bc9-6396-4cff-9f6c-2942ee5de79a" name="Changes" comment="start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/CartController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/BookServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/images/TheMost.png" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/static/TheMost.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/books.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Books.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/add-book.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/add-book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/images/TheMost.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/books.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/model/Books.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/model/Books.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/service/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/add-book.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/templates/add-book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/templates/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/templates/list.html" afterDir="false" />
     </list>
@@ -112,7 +114,7 @@
       <workItem from="1719224394526" duration="10949000" />
       <workItem from="1719245446179" duration="5889000" />
       <workItem from="1719300771167" duration="4134000" />
-      <workItem from="1719306341757" duration="13201000" />
+      <workItem from="1719306341757" duration="15946000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />
