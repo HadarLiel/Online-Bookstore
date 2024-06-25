@@ -18,12 +18,13 @@
     <!-- Iterate over each book and create a card -->
     <div th:each="book : ${books}" class="col">
       <div class="card h-100">
-        <img th:if="${book.coverImageUrl}" th:src="@{/images/{fileName}(fileName=${book.coverImageUrl})}" class="card-img-top" alt="Book Cover">
+        <img th:if="${book.coverImageUrl}" th:src="@{/TheMost.png}" class="card-img-top" alt="Book Cover">
         <div class="card-body">
           <h5 class="card-title" th:text="${book.title}"></h5>
           <p class="card-text" th:text="${'Author: ' + book.author}"></p>
           <p class="card-text" th:text="${'Price: $' + book.price}"></p>
           <a th:href="@{/books/{id}(id=${book.id})}" class="btn btn-primary">View Details</a>
+          <a th:href="@{/books/{id}(id=${book.id})}" class="btn btn-primary">Add to cart</a>
         </div>
       </div>
     </div>
