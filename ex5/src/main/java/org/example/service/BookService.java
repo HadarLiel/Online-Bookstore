@@ -56,13 +56,13 @@ public class BookService {
             bookRepository.save(book1);
 
             Books book2 = new Books();
-            book2.setTitle("Another Book");
-            book2.setAuthor("Another Author");
-            book2.setPrice(45.00);
-            book2.setPublicationYear(2019);
-            book2.setStockQuantity(20);
-            book2.setCoverImageUrl("AnotherBook.png");
-            book2.setDescription("This is a sample description for book2.");
+            book2.setTitle("Diary Of A Wimpy Kid");
+            book2.setAuthor("Jeff Kinney");
+            book2.setPrice(18.00);
+            book2.setPublicationYear(2007);
+            book2.setStockQuantity(40);
+            book2.setCoverImageUrl("DiaryOfAWimpyKid.png");
+            book2.setDescription("This is a sample description for Diary Of A Wimpy Kid.");
             bookRepository.save(book2);
 
             // New books to add
@@ -136,15 +136,6 @@ public class BookService {
             book9.setDescription("This is a sample description for Room For Rent.");
             bookRepository.save(book9);
 
-            Books book10 = new Books();
-            book10.setTitle("Diary Of A Wimpy Kid");
-            book10.setAuthor("Jeff Kinney");
-            book10.setPrice(18.00);
-            book10.setPublicationYear(2007);
-            book10.setStockQuantity(40);
-            book10.setCoverImageUrl("DiaryOfAWimpyKid.png");
-            book10.setDescription("This is a sample description for Diary Of A Wimpy Kid.");
-            bookRepository.save(book10);
 
     }
 

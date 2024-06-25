@@ -18,7 +18,7 @@
     <!-- Iterate over each book and create a card -->
     <div th:each="book : ${books}" class="col">
       <div class="card h-100">
-        <img th:if="${book.coverImageUrl}" th:src="@{/images/{imageName}(imageName=${book.coverImageUrl})}" class="card-img-top" alt="Book Cover">
+        <img th:if="${book.coverImageUrl}" th:src="@{/{imageName}(imageName=${book.coverImageUrl})}" class="card-img-top" alt="Book Cover">
         <div class="card-body">
           <h5 class="card-title" th:text="${book.title}"></h5>
           <p class="card-text" th:text="${'Author: ' + book.author}"></p>
@@ -48,8 +48,8 @@
       </div>
     </div>
   </div>
-
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
