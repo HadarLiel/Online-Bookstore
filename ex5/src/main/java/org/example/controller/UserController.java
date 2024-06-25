@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-
 @Controller
 public class UserController {
 
@@ -35,33 +34,29 @@ public class UserController {
     @PostMapping("/register")
     public String registerUser(@Valid @ModelAttribute("user") User user,
                                BindingResult result,
-                               Model model,
-                               HttpServletRequest request) {
+                               Model model) {
+        // Custom validation for email and username uniqueness
+        if (!result.hasErrors()) {
+            // Check if email already exists
+            User existingEmailUser = userRepository.findByEmail(user.getEmail());
+            if (existingEmailUser != null) {
+                result.rejectValue("email", null, "Email already exists.");
+            }
+
+            // Check if username already exists
+            User existingUsernameUser = userRepository.findByUsername(user.getUsername());
+            if (existingUsernameUser != null) {
+                result.rejectValue("username", null, "Username already exists.");
+            }
+        }
+
         if (result.hasErrors()) {
-            return "register"; // Return registration form again if validation fails
+            return "register"; // Return registration form again with validation errors
         }
-
-        // Check if email already exists
-        User existingUser = userRepository.findByEmail(user.getEmail());
-        if (existingUser != null) {
-            model.addAttribute("registrationError", "Email already exists.");
-            return "register"; // Return registration form with error message
-        }
-
-        // Check if username already exists (if needed)
-        // User existingUsername = userRepository.findByUsername(user.getUsername());
-        // if (existingUsername != null) {
-        //     model.addAttribute("registrationError", "Username already exists.");
-        //     return "register"; // Return registration form with error message
-        // }
 
         // Encode password before saving
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
-
-        // Optional: Add user to session after registration
-        HttpSession session = request.getSession();
-        session.setAttribute("loggedInUser", user);
 
         return "redirect:/login"; // Redirect to login page after successful registration
     }
