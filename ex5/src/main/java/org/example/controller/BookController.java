@@ -6,15 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.util.List;
 
 @Controller
-@RequestMapping("/books")
+@RequestMapping("/auth/books")
 public class BookController {
 
     @Autowired
@@ -22,39 +18,39 @@ public class BookController {
 
     @GetMapping
     public String getAllBooks(Model model) {
-        model.addAttribute("books", bookService.getAllBooks());
-        return "books/list";
-    }
-
-    @GetMapping("/new")
-    public String newBookForm(Model model) {
-        model.addAttribute("book", new Book());
-        return "books/form";
-    }
-
-    @PostMapping
-    public String saveBook(@ModelAttribute Book book, @RequestParam("file") MultipartFile file) {
-        if (!file.isEmpty()) {
-            try {
-                // Save the file
-                String uploadDir = "src/main/resources/static/images/";
-                String fileName = file.getOriginalFilename();
-                Path path = Paths.get(uploadDir + fileName);
-                Files.write(path, file.getBytes());
-
-                // Set the cover image URL
-                book.setCoverImageUrl("/images/" + fileName);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        bookService.saveBook(book);
-        return "redirect:/books";
+        List<Book> books = bookService.getAllBooks();
+        model.addAttribute("books", books);
+        return "book-list";
     }
 
     @GetMapping("/{id}")
-    public String getBook(@PathVariable Long id, Model model) {
-        model.addAttribute("book", bookService.getBookById(id));
-        return "books/detail";
+    public String getBookById(@PathVariable("id") Long id, Model model) {
+        Book book = bookService.getBookById(id);
+        if (book == null) {
+            // Handle book not found scenario
+            return "redirect:/error";
+        }
+        model.addAttribute("book", book);
+        return "book-details";
+    }
+
+    @GetMapping("/add")
+    public String showAddBookForm(Model model) {
+        model.addAttribute("book", new Book());
+        return "add-book";
+    }
+
+    @PostMapping
+    public String addBook(@ModelAttribute("book") Book book) {
+        // Validate and process the book object, then save
+        bookService.addBook(book);
+        return "redirect:/auth/books";
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseBody
+    public String deleteBook(@PathVariable("id") Long id) {
+        bookService.deleteBook(id);
+        return "Deleted book with id: " + id;
     }
 }

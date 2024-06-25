@@ -1,10 +1,12 @@
 package org.example.model;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,7 +20,20 @@ public class User {
     @Column(nullable = false)
     private String email;
 
+    // Constructors
+
+    public User() {
+        // Default constructor required by JPA
+    }
+
+    public User(String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
+
     // Getters and Setters
+
     public Long getId() {
         return id;
     }
@@ -26,7 +41,6 @@ public class User {
     public void setId(Long id) {
         this.id = id;
     }
-
 
     public String getUsername() {
         return username;
@@ -42,5 +56,24 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    // toString() method (optional but recommended for logging and debugging)
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

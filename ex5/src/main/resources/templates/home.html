@@ -11,14 +11,18 @@
   <h1>Welcome to the Book Store</h1>
   <p>Explore our collection of books!</p>
 
+  <!-- For anonymous users -->
   <div sec:authorize="isAnonymous()">
     <a href="/login" class="btn btn-primary">Login</a>
     <a href="/register" class="btn btn-secondary">Register</a>
   </div>
 
+  <!-- For authenticated users -->
   <div sec:authorize="isAuthenticated()">
     <a href="/books" class="btn btn-primary">View Books</a>
-    <a href="/logout" class="btn btn-danger">Logout</a>
+    <form th:action="@{/logout}" method="post">
+      <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
   </div>
 </div>
 </body>
