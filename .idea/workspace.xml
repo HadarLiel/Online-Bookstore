@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50609bc9-6396-4cff-9f6c-2942ee5de79a" name="Changes" comment="start">
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/add-book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/BookStoreApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/PasswordEncoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/config/SecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/BookController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/HomeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/model/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/repository/BookRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/repository/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/service/BookService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/service/UserDetailsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/UserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +101,7 @@
       <workItem from="1719224394526" duration="10949000" />
       <workItem from="1719245446179" duration="5889000" />
       <workItem from="1719300771167" duration="4134000" />
-      <workItem from="1719306341757" duration="1235000" />
+      <workItem from="1719306341757" duration="2975000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />

@@ -15,12 +15,20 @@ public class User {
     private String username;
 
     @Column(nullable = false)
+    @Size(min = 8, message = "Password must be at least 8 characters long")
+    @Pattern.List({
+            @Pattern(regexp = "(?=.*[0-9]).+", message = "Password must contain a digit"),
+            @Pattern(regexp = "(?=.*[a-z]).+", message = "Password must contain a lowercase letter"),
+            @Pattern(regexp = "(?=.*[A-Z]).+", message = "Password must contain an uppercase letter"),
+            @Pattern(regexp = "(?=.*[@#$%^&+=_-]).+", message = "Password must contain a special character")
+    })
     private String password;
 
     @Column(nullable = false)
+    @Email(message = "Email should be valid")
     private String email;
 
-    // Constructors
+    // Constructors, Getters, and Setters
 
     public User() {
         // Default constructor required by JPA
