@@ -43,7 +43,7 @@ public class BookService {
 
     @PostConstruct
     public void initData() {
-        if (bookRepository.count() == 0) {
+
             // Existing books
             Books book1 = new Books();
             book1.setTitle("The Most");
@@ -145,7 +145,7 @@ public class BookService {
             book10.setCoverImageUrl("DiaryOfAWimpyKid.png");
             book10.setDescription("This is a sample description for Diary Of A Wimpy Kid.");
             bookRepository.save(book10);
-        }
+
     }
 
 
