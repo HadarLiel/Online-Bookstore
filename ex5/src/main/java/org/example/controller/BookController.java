@@ -47,11 +47,11 @@ public class BookController {
         try {
             bookService.addBook(book, coverImage);
         } catch (IOException e) {
+            e.printStackTrace();
             return "redirect:/error"; // Redirects to error page if there's an issue with the file upload
         }
         return "redirect:/books"; // Redirects to book list after adding book
     }
-
     @DeleteMapping("/{id}")
     @ResponseBody
     public String deleteBook(@PathVariable("id") Long id) {

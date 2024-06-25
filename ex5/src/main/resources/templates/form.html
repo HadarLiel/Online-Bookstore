@@ -7,7 +7,7 @@
 <h1>Add New Book</h1>
 <form th:action="@{/books}" method="post" enctype="multipart/form-data">
     <label>Title: <input type="text" name="title" required></label><br>
-    <label>Author: <input type="text" name="author" required></label><br>
+    <label>Author: <input type="text" name="authorName" required></label><br>
     <label>Description: <textarea name="description" required></textarea></label><br>
     <label>Price: <input type="number" step="0.01" name="price" required></label><br>
     <label>Cover Image: <input type="file" name="file" accept="image/*" required></label><br>

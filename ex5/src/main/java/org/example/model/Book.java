@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "book") // Specify the table name if it's different from the class name
 public class Book {
 
     @Id
@@ -14,27 +15,31 @@ public class Book {
     private String title;
 
     @Column(nullable = false)
-    private String authorName;
+    private String author;
+
+    @Column(name = "cover_image_url", nullable = false)
+    private String coverImageUrl;
 
     @Column(nullable = false)
     private double price;
 
-    @Column(nullable = false)
-    private String name;
-
-    @Column(nullable = false)
+    @Column(name = "publication_year", nullable = false)
     private int publicationYear;
 
     @Column(nullable = false)
     private String publisher;
 
-    @Column(nullable = false)
+    @Column(name = "stock_quantity", nullable = false)
     private int stockQuantity;
 
-    @Column(nullable = false)
-    private String coverImageFileName;
+    // Additional fields as per your database schema
+    @Column(name = "author_name")
+    private String authorName;
 
-    @Column(nullable = false)
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "added_date", nullable = false)
     private LocalDateTime addedDate;
 
     // Constructors
@@ -42,14 +47,17 @@ public class Book {
         this.addedDate = LocalDateTime.now(); // Initialize addedDate with current date/time
     }
 
-    public Book(String title, String authorName, double price, int publicationYear, String publisher, int stockQuantity, String coverImageFileName) {
+    public Book(String title, String author, String coverImageUrl, double price, int publicationYear,
+                String publisher, int stockQuantity, String authorName, String name) {
         this.title = title;
-        this.authorName = authorName;
+        this.author = author;
+        this.coverImageUrl = coverImageUrl;
         this.price = price;
         this.publicationYear = publicationYear;
         this.publisher = publisher;
         this.stockQuantity = stockQuantity;
-        this.coverImageFileName = coverImageFileName;
+        this.authorName = authorName;
+        this.name = name;
         this.addedDate = LocalDateTime.now(); // Initialize addedDate with current date/time
     }
 
@@ -110,12 +118,20 @@ public class Book {
         this.stockQuantity = stockQuantity;
     }
 
-    public String getCoverImageFileName() {
-        return coverImageFileName;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setCoverImageFileName(String coverImageFileName) {
-        this.coverImageFileName = coverImageFileName;
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getCoverImageUrl() {
+        return coverImageUrl;
+    }
+
+    public void setCoverImageUrl(String coverImageUrl) {
+        this.coverImageUrl = coverImageUrl;
     }
 
     public LocalDateTime getAddedDate() {
@@ -134,19 +150,23 @@ public class Book {
         this.name = name;
     }
 
+
     // toString() method (optional but recommended for logging and debugging)
     @Override
     public String toString() {
         return "Book{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", authorName='" + authorName + '\'' +
+                ", author='" + author + '\'' +
+                ", coverImageUrl='" + coverImageUrl + '\'' +
                 ", price=" + price +
                 ", publicationYear=" + publicationYear +
                 ", publisher='" + publisher + '\'' +
                 ", stockQuantity=" + stockQuantity +
-                ", coverImageFileName='" + coverImageFileName + '\'' +
+                ", authorName='" + authorName + '\'' +
+                ", name='" + name + '\'' +
                 ", addedDate=" + addedDate +
                 '}';
     }
+
 }
