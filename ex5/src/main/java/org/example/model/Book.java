@@ -10,9 +10,11 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title;
+    @Column(nullable = false)
+    private String name;
 
-    private String author;
+    @Column(nullable = false)
+    private String authorName;
 
     @Column(columnDefinition = "TEXT")
     private String description;
@@ -21,9 +23,12 @@ public class Book {
 
     private LocalDateTime addedDate;
 
-    @ManyToOne(fetch = FetchType.LAZY) // Ensure proper lazy loading
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "added_by", nullable = false)
     private User addedBy;
+
+    @Column(nullable = false)
+    private Double price;
 
     // Constructors
 
@@ -31,13 +36,14 @@ public class Book {
         // Default constructor required by JPA
     }
 
-    public Book(String title, String author, String description, String coverImageUrl, LocalDateTime addedDate, User addedBy) {
-        this.title = title;
-        this.author = author;
+    public Book(String name, String authorName, String description, String coverImageUrl, LocalDateTime addedDate, User addedBy, Double price) {
+        this.name = name;
+        this.authorName = authorName;
         this.description = description;
         this.coverImageUrl = coverImageUrl;
         this.addedDate = addedDate;
         this.addedBy = addedBy;
+        this.price = price;
     }
 
     // Getters and Setters
@@ -50,20 +56,20 @@ public class Book {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getAuthorName() {
+        return authorName;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
     }
 
     public String getDescription() {
@@ -98,18 +104,27 @@ public class Book {
         this.addedBy = addedBy;
     }
 
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
     // toString() method (optional but recommended for logging and debugging)
 
     @Override
     public String toString() {
         return "Book{" +
                 "id=" + id +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
+                ", name='" + name + '\'' +
+                ", authorName='" + authorName + '\'' +
                 ", description='" + description + '\'' +
                 ", coverImageUrl='" + coverImageUrl + '\'' +
                 ", addedDate=" + addedDate +
                 ", addedBy=" + addedBy +
+                ", price=" + price +
                 '}';
     }
 }
