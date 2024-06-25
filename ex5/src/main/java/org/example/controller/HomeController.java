@@ -1,18 +1,24 @@
 package org.example.controller;
 
+import org.example.model.Book;
+import org.example.service.BookService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
 
 @Controller
 public class HomeController {
 
-    @GetMapping("/")
-    public String home() {
-        return "home";
-    }
+    @Autowired
+    private BookService bookService;
 
-    @GetMapping("/login")
-    public String login() {
-        return "login";
+    @GetMapping("/")
+    public String home(Model model) {
+        List<Book> books = bookService.getAllBooks();
+        model.addAttribute("books", books);
+        return "home";
     }
 }

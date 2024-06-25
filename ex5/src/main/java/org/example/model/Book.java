@@ -11,43 +11,49 @@ public class Book {
     private Long id;
 
     @Column(nullable = false)
-    private String name;
+    private String title;
 
     @Column(nullable = false)
     private String authorName;
 
-    @Column(columnDefinition = "TEXT")
-    private String description;
-
-    private String coverImageUrl;
-
-    private LocalDateTime addedDate;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "added_by", nullable = false)
-    private User addedBy;
+    @Column(nullable = false)
+    private double price;
 
     @Column(nullable = false)
-    private Double price;
+    private String name;
+
+    @Column(nullable = false)
+    private int publicationYear;
+
+    @Column(nullable = false)
+    private String publisher;
+
+    @Column(nullable = false)
+    private int stockQuantity;
+
+    @Column(nullable = false)
+    private String coverImageFileName;
+
+    @Column(nullable = false)
+    private LocalDateTime addedDate;
 
     // Constructors
-
     public Book() {
-        // Default constructor required by JPA
+        this.addedDate = LocalDateTime.now(); // Initialize addedDate with current date/time
     }
 
-    public Book(String name, String authorName, String description, String coverImageUrl, LocalDateTime addedDate, User addedBy, Double price) {
-        this.name = name;
+    public Book(String title, String authorName, double price, int publicationYear, String publisher, int stockQuantity, String coverImageFileName) {
+        this.title = title;
         this.authorName = authorName;
-        this.description = description;
-        this.coverImageUrl = coverImageUrl;
-        this.addedDate = addedDate;
-        this.addedBy = addedBy;
         this.price = price;
+        this.publicationYear = publicationYear;
+        this.publisher = publisher;
+        this.stockQuantity = stockQuantity;
+        this.coverImageFileName = coverImageFileName;
+        this.addedDate = LocalDateTime.now(); // Initialize addedDate with current date/time
     }
 
     // Getters and Setters
-
     public Long getId() {
         return id;
     }
@@ -56,12 +62,12 @@ public class Book {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getAuthorName() {
@@ -72,20 +78,44 @@ public class Book {
         this.authorName = authorName;
     }
 
-    public String getDescription() {
-        return description;
+    public double getPrice() {
+        return price;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public String getCoverImageUrl() {
-        return coverImageUrl;
+    public int getPublicationYear() {
+        return publicationYear;
     }
 
-    public void setCoverImageUrl(String coverImageUrl) {
-        this.coverImageUrl = coverImageUrl;
+    public void setPublicationYear(int publicationYear) {
+        this.publicationYear = publicationYear;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public int getStockQuantity() {
+        return stockQuantity;
+    }
+
+    public void setStockQuantity(int stockQuantity) {
+        this.stockQuantity = stockQuantity;
+    }
+
+    public String getCoverImageFileName() {
+        return coverImageFileName;
+    }
+
+    public void setCoverImageFileName(String coverImageFileName) {
+        this.coverImageFileName = coverImageFileName;
     }
 
     public LocalDateTime getAddedDate() {
@@ -96,35 +126,27 @@ public class Book {
         this.addedDate = addedDate;
     }
 
-    public User getAddedBy() {
-        return addedBy;
+    public String getName() {
+        return name;
     }
 
-    public void setAddedBy(User addedBy) {
-        this.addedBy = addedBy;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setName(String name) {
+        this.name = name;
     }
 
     // toString() method (optional but recommended for logging and debugging)
-
     @Override
     public String toString() {
         return "Book{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", title='" + title + '\'' +
                 ", authorName='" + authorName + '\'' +
-                ", description='" + description + '\'' +
-                ", coverImageUrl='" + coverImageUrl + '\'' +
-                ", addedDate=" + addedDate +
-                ", addedBy=" + addedBy +
                 ", price=" + price +
+                ", publicationYear=" + publicationYear +
+                ", publisher='" + publisher + '\'' +
+                ", stockQuantity=" + stockQuantity +
+                ", coverImageFileName='" + coverImageFileName + '\'' +
+                ", addedDate=" + addedDate +
                 '}';
     }
 }
