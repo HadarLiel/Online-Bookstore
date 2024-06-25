@@ -46,12 +46,12 @@ public class BookService {
 
             // Existing books
             Books book1 = new Books();
-            book1.setTitle("The Most");
-            book1.setAuthor("Jessica Anthony");
+            book1.setTitle("The No Show");
+            book1.setAuthor("unknown");
             book1.setPrice(50.00);
             book1.setPublicationYear(2020);
             book1.setStockQuantity(10);
-            book1.setCoverImageUrl("TheMost.png");
+            book1.setCoverImageUrl("TheNoShow.png");
             book1.setDescription("This is a sample description for book1.");
             bookRepository.save(book1);
 
