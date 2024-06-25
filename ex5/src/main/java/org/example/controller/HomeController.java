@@ -1,6 +1,6 @@
 package org.example.controller;
 
-import org.example.model.Book;
+import org.example.model.Books;
 import org.example.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,7 +17,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model) {
-        List<Book> books = bookService.getAllBooks();
+        List<Books> books = bookService.getAllBooks();
         model.addAttribute("books", books);
         return "home";
     }

@@ -10,10 +10,9 @@
     <h1>Add New Book</h1>
     <form action="/books/add" method="post" th:object="${book}" enctype="multipart/form-data">
         <input type="text" class="form-control" placeholder="Title" th:field="*{title}">
-        <input type="text" class="form-control" placeholder="Author Name" th:field="*{authorName}">
+        <input type="text" class="form-control" placeholder="Author Name" th:field="*{author}">
         <input type="number" step="0.01" class="form-control" placeholder="Price" th:field="*{price}">
         <input type="number" class="form-control" placeholder="Publication Year" th:field="*{publicationYear}">
-        <input type="text" class="form-control" placeholder="Publisher" th:field="*{publisher}">
         <input type="number" class="form-control" placeholder="Stock Quantity" th:field="*{stockQuantity}">
         <input type="file" class="form-control" id="coverImage" name="coverImage" accept="image/*">
         <button class="btn btn-outline-primary" type="submit">Add Book</button>

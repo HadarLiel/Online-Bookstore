@@ -1,6 +1,6 @@
 package org.example.service;
 
-import org.example.model.Book;
+import org.example.model.Books;
 import org.example.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,7 +25,7 @@ public class BookService {
     @Autowired
     private BookRepository bookRepository;
 
-    public void addBook(Book book, MultipartFile coverImage) throws IOException {
+    public void addBook(Books book, MultipartFile coverImage) throws IOException {
         if (coverImage != null && !coverImage.isEmpty()) {
             String fileName = coverImage.getOriginalFilename();
             Path filePath = Paths.get(UPLOAD_DIR + fileName);
@@ -44,37 +44,31 @@ public class BookService {
     @PostConstruct
     public void initData() {
         if (bookRepository.count() == 0) {
-            Book book1 = new Book();
+            Books book1 = new Books();
             book1.setTitle("The Most");
             book1.setAuthor("Jessica Anthony");
             book1.setPrice(50.00);
             book1.setPublicationYear(2020);
-            book1.setPublisher("Famous Publisher");
             book1.setStockQuantity(10);
             book1.setCoverImageUrl("TheMost.png");
-            book1.setAuthorName("Jessica Anthony"); // Assuming author_name is same as author for initial data
-            book1.setName("The Most"); // Assuming name is same as title for initial data
             bookRepository.save(book1);
 
-            Book book2 = new Book();
+            Books book2 = new Books();
             book2.setTitle("Another Book");
             book2.setAuthor("Another Author");
             book2.setPrice(45.00);
             book2.setPublicationYear(2019);
-            book2.setPublisher("Another Publisher");
             book2.setStockQuantity(20);
             book2.setCoverImageUrl("TheMost.png");
-            book2.setAuthorName("Another Author"); // Assuming author_name is same as author for initial data
-            book2.setName("Another Book"); // Assuming name is same as title for initial data
             bookRepository.save(book2);
         }
     }
 
-    public Book getBookById(Long id) {
+    public Books getBookById(Long id) {
         return bookRepository.findById(id).orElse(null);
     }
 
-    public List<Book> getAllBooks() {
+    public List<Books> getAllBooks() {
         return bookRepository.findAll();
     }
 }

@@ -1,6 +1,6 @@
 package org.example.controller;
 
-import org.example.model.Book;
+import org.example.model.Books;
 import org.example.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,14 +20,14 @@ public class BookController {
 
     @GetMapping
     public String getAllBooks(Model model) {
-        List<Book> books = bookService.getAllBooks();
+        List<Books> books = bookService.getAllBooks();
         model.addAttribute("books", books);
         return "book-list"; // Renders book-list.html Thymeleaf template
     }
 
     @GetMapping("/{id}")
     public String getBookById(@PathVariable("id") Long id, Model model) {
-        Book book = bookService.getBookById(id);
+        Books book = bookService.getBookById(id);
         if (book == null) {
             return "redirect:/error"; // Redirects to error page if book not found
         }
@@ -37,21 +37,22 @@ public class BookController {
 
     @GetMapping("/add")
     public String showAddBookForm(Model model) {
-        model.addAttribute("book", new Book());
+        model.addAttribute("book", new Books());
         return "add-book"; // Renders add-book.html Thymeleaf template
     }
 
     @PostMapping("/add")
-    public String addBook(@ModelAttribute("book") Book book,
+    public String addBook(@ModelAttribute("book") Books book,
                           @RequestParam("coverImage") MultipartFile coverImage) {
         try {
-            bookService.addBook(book, coverImage);
+            bookService.addBook(book , coverImage);
         } catch (IOException e) {
             e.printStackTrace();
             return "redirect:/error"; // Redirects to error page if there's an issue with the file upload
         }
         return "redirect:/books"; // Redirects to book list after adding book
     }
+
     @DeleteMapping("/{id}")
     @ResponseBody
     public String deleteBook(@PathVariable("id") Long id) {
