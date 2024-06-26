@@ -11,6 +11,21 @@
   <h1>Welcome to the Book Store</h1>
   <p>Explore our collection of books!</p>
 
+  <form method="get" action="/" class="mb-4">
+    <div class="row g-2">
+      <div class="col-auto">
+        <select class="form-select" name="type" onchange="this.form.submit()">
+          <option value="" th:selected="${selectedType == null}">All Types</option>
+          <option th:each="bookType : ${bookTypes}" th:value="${bookType}" th:text="${bookType}"
+                  th:selected="${bookType == selectedType}"></option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Filter</button>
+      </div>
+    </div>
+  </form>
+
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <!-- Iterate over each book and create a card -->
     <div th:each="book : ${books}" class="col">

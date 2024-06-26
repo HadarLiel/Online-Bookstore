@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50609bc9-6396-4cff-9f6c-2942ee5de79a" name="Changes" comment="start">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Books.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/add-book.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/add-book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/model/Books.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/model/Books.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/service/BookService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/add-book.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/templates/add-book.html" afterDir="false" />
-    </list>
+    <list default="true" id="50609bc9-6396-4cff-9f6c-2942ee5de79a" name="Changes" comment="start" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +107,7 @@
       <workItem from="1719306341757" duration="17002000" />
       <workItem from="1719329587232" duration="1379000" />
       <workItem from="1719332209020" duration="4878000" />
-      <workItem from="1719393621305" duration="797000" />
+      <workItem from="1719393621305" duration="1102000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />

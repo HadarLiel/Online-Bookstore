@@ -81,4 +81,11 @@ public class BookService {
     public List<Books> getAllBooks() {
         return bookRepository.findAll();
     }
-}
+
+    public List<Books> getBooksByType(String type) {
+        return bookRepository.findByType(type);
+    }
+
+    public List<String> getAllBookTypes() {
+        return bookRepository.findDistinctTypes();
+    }}
