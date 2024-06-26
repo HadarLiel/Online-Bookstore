@@ -38,9 +38,10 @@
           <p class="card-text" th:text="${'Price: $' + book.price}"></p>
           <p class="card-text" th:text="${'Type: ' + book.type}"></p>
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" th:data-bs-target="'#descriptionModal-' + ${book.id}">View Details</button>
-          <form th:action="@{/books/{id}/addToCart(id=${book.id})}" method="post">
-            <button type="submit">Add to Cart</button>
+          <form th:action="@{/books/{id}/addToCart(id=${book.id})}" method="post" class="form-inline">
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
           </form>
+
         </div>
       </div>
     </div>
