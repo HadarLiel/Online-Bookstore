@@ -17,6 +17,7 @@
             <h1 th:text="${book.title}"></h1>
             <p>Author: <span th:text="${book.author}"></span></p>
             <p>Price: $<span th:text="${book.price}"></span></p>
+            <p>Type: <span th:text="${book.type}"></span></p>
             <!-- Button to trigger modal -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" th:data-bs-target="'#descriptionModal-' + ${book.id}">View Details</button>
             <form th:action="@{/cart/add/{id}(id=${book.id})}" method="post">

@@ -35,13 +35,16 @@ public class Books {
     @Column(nullable = false, length = 1000) // Adjust length based on your description's requirements
     private String description;
 
+    @Column(nullable = false) // Add the new type column
+    private String type;
+
     // Constructors
     public Books() {
         this.addedDate = LocalDateTime.now(); // Initialize addedDate with current date/time
     }
 
     public Books(String title, String coverImageUrl, String author, double price, int publicationYear,
-                 int stockQuantity, String description) {
+                 int stockQuantity, String description, String type) {
         this.title = title;
         this.coverImageUrl = coverImageUrl;
         this.author = author;
@@ -49,6 +52,7 @@ public class Books {
         this.publicationYear = publicationYear;
         this.stockQuantity = stockQuantity;
         this.description = description;
+        this.type = type;
         this.addedDate = LocalDateTime.now(); // Initialize addedDate with current date/time
     }
 
@@ -125,7 +129,14 @@ public class Books {
         this.description = description;
     }
 
-    // toString() method (optional but recommended for logging and debugging)
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "Books{" +
@@ -138,6 +149,7 @@ public class Books {
                 ", stockQuantity=" + stockQuantity +
                 ", addedDate=" + addedDate +
                 ", description='" + description + '\'' +
+                ", type='" + type + '\'' +
                 '}';
     }
 }

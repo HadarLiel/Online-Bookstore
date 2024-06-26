@@ -45,7 +45,7 @@ public class BookController {
     public String addBook(@ModelAttribute("book") Books book,
                           @RequestParam("coverImage") MultipartFile coverImage) {
         try {
-            bookService.addBook(book , coverImage);
+            bookService.addBook(book, coverImage);
         } catch (IOException e) {
             e.printStackTrace();
             return "redirect:/error"; // Redirects to error page if there's an issue with the file upload

@@ -5,42 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50609bc9-6396-4cff-9f6c-2942ee5de79a" name="Changes" comment="start">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/BookStoreApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/PasswordEncoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/config/SecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/BookController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/HomeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/model/Books.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/repository/BookRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/repository/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/service/BookService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/service/UserDetailsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/static/TheMost.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/static/aTaleOfFiveBalloons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/static/bookLovers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/static/diaryOfAWimpyKid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/static/doOver.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/static/dracula.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/static/harryPotter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/static/roomForRent.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/static/ruleBook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/static/theNoShow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/add-book.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/navbar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Books.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/add-book.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/add-book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/model/Books.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/model/Books.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/service/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/add-book.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/templates/add-book.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,35 +46,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Maven.ex5 [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BookStoreApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LIOR/Downloads/ex5-spring-gal_ei_simha_ma&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;75d885f9e4dc84bb56a99ebb6a630d86&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Maven.ex5 [clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.BookStoreApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/hadarhar/Desktop/ex5-spring-neviim-hadar_harush_lior_yakobovich",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "75d885f9e4dc84bb56a99ebb6a630d86",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -143,6 +117,7 @@
       <workItem from="1719306341757" duration="17002000" />
       <workItem from="1719329587232" duration="1379000" />
       <workItem from="1719332209020" duration="4878000" />
+      <workItem from="1719393621305" duration="797000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />
