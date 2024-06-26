@@ -20,8 +20,9 @@
             <p>Type: <span th:text="${book.type}"></span></p>
             <!-- Button to trigger modal -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" th:data-bs-target="'#descriptionModal-' + ${book.id}">View Details</button>
-            <form th:action="@{/cart/add/{id}(id=${book.id})}" method="post">
-                <button type="submit" class="btn btn-primary">Add to Cart</button>
+
+            <form th:action="@{/books/{id}/addToCart(id=${book.id})}" method="post">
+                <button type="submit">Add to Cart</button>
             </form>
             <a href="/books" class="btn btn-secondary">Back to Book List</a>
         </div>

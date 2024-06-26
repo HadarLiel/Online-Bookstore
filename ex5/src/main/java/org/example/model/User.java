@@ -2,6 +2,8 @@ package org.example.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -29,7 +31,13 @@ public class User {
     @Email(message = "Email should be valid")
     private String email;
 
-    // Constructors, Getters, and Setters
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "user_cart",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "book_id")
+    )
+    private List<Books> cartItems = new ArrayList<>();
 
     public User() {
         // Default constructor required by JPA
@@ -73,6 +81,14 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<Books> getCartItems() {
+        return cartItems;
+    }
+
+    public void setCartItems(List<Books> cartItems) {
+        this.cartItems = cartItems;
     }
 
     // toString() method (optional but recommended for logging and debugging)

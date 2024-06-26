@@ -8,6 +8,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -32,23 +33,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/home", "/register", "/login").permitAll()
-                .antMatchers("/cart").authenticated() // Restrict cart access to authenticated users
+                .antMatchers("/", "/home", "/register", "/login", "/books", "/books/{id}").permitAll()
+                .antMatchers("/cart", "/books/{id}/addToCart").authenticated()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login").permitAll()
-                .defaultSuccessUrl("/", true) // Redirect to home page after successful login
+                .defaultSuccessUrl("/", true)
                 .and()
                 .logout()
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/") // Redirect to home page after logout
+                .logoutSuccessUrl("/")
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID")
                 .and()
                 .exceptionHandling()
-                .accessDeniedPage("/login?authorization_error=true") // Redirect to login page for unauthorized access
+                .accessDeniedPage("/login?authorization_error=true")
                 .and()
-                .csrf().disable(); // Disable CSRF for simplicity
+                .csrf().disable();
     }
 }
