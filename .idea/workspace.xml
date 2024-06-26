@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50609bc9-6396-4cff-9f6c-2942ee5de79a" name="Changes" comment="add cart save in db">
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/service/CartService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/CartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/templates/cart.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +113,7 @@
       <workItem from="1719332209020" duration="4878000" />
       <workItem from="1719393621305" duration="1102000" />
       <workItem from="1719399471955" duration="3651000" />
-      <workItem from="1719404136703" duration="4360000" />
+      <workItem from="1719404136703" duration="4706000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />
