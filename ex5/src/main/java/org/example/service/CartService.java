@@ -36,5 +36,12 @@ public class CartService {
         }
     }
 
+    public void removeFromCart(String username, Long bookId) {
+        User user = userRepository.findByUsername(username);
+        if (user != null) {
+            user.getCartItems().removeIf(book -> book.getId().equals(bookId));
+            userRepository.save(user);
+        }
+    }
     // Add more methods as needed (e.g., removeFromCart, clearCart)
 }

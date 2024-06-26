@@ -31,7 +31,7 @@
     <div th:each="book : ${books}" class="col">
       <div class="card h-100">
         <!-- Ensure correct URL resolution for images -->
-        <img th:if="${book.coverImageUrl}" th:src="@{/{imageName}(imageName=${book.coverImageUrl})}" class="card-img-top" alt="Book Cover">
+        <img th:if="${book.coverImageUrl}" th:src="@{/images/{imageName}(imageName=${book.coverImageUrl})}" class="card-img-top" alt="Book Cover">
         <div class="card-body">
           <h5 class="card-title" th:text="${book.title}"></h5>
           <p class="card-text" th:text="${'Author: ' + book.author}"></p>

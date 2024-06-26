@@ -31,15 +31,15 @@
     <div th:each="book : ${books}" class="col">
       <div class="card h-100">
         <!-- Ensure correct URL resolution for images -->
-        <img th:if="${book.coverImageUrl}" th:src="@{/{imageName}(imageName=${book.coverImageUrl})}" class="card-img-top" alt="Book Cover">
+        <img th:if="${book.coverImageUrl}" th:src="@{/images/{imageName}(imageName=${book.coverImageUrl})}" class="card-img-top" alt="Book Cover">
         <div class="card-body">
           <h5 class="card-title" th:text="${book.title}"></h5>
           <p class="card-text" th:text="${'Author: ' + book.author}"></p>
           <p class="card-text" th:text="${'Price: $' + book.price}"></p>
           <p class="card-text" th:text="${'Type: ' + book.type}"></p>
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" th:data-bs-target="'#descriptionModal-' + ${book.id}">View Details</button>
-          <form th:action="@{/cart/add/{id}(id=${book.id})}" method="post">
-            <button type="submit" class="btn btn-primary">Add to Cart</button>
+          <form th:action="@{/books/{id}/addToCart(id=${book.id})}" method="post">
+            <button type="submit">Add to Cart</button>
           </form>
         </div>
       </div>

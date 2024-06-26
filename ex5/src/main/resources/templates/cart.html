@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
     <title>Your Cart</title>
-    <!-- Add your CSS links here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<h1>Your Cart</h1>
+<div th:replace="~{navbar :: navbar}"></div>
 
-<div th:if="${cartEmpty}">
-    <p th:text="${message}"></p>
+<div class="container mt-5">
+    <h1>Your Cart</h1>
+
+    <div th:if="${cartEmpty}">
+        <p class="alert alert-info" th:text="${message}"></p>
+    </div>
+
+    <div th:unless="${cartEmpty}">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col" th:each="book : ${cartItems}">
+                <div class="card h-100">
+                    <img th:src="@{/images/{imageName}(imageName=${book.coverImageUrl})}" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${book.title}"></h5>
+                        <p class="card-text">Author: <span th:text="${book.author}"></span></p>
+                        <p class="card-text">Price: $<span th:text="${book.price}"></span></p>
+                        <p class="card-text">Type: <span th:text="${book.type}"></span></p>
+                        <form th:action="@{/cart/remove/{id}(id=${book.id})}" method="post">
+                            <button type="submit" class="btn btn-danger">Remove from Cart</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <h3>Total Price: $<span th:text="${#numbers.formatDecimal(totalPrice, 1, 2)}"></span></h3>
+        </div>
+
+        <div class="mt-4">
+            <a href="/" class="btn btn-primary">Continue Shopping</a>
+            <a href="/checkout" class="btn btn-success">Proceed to Checkout</a>
+        </div>
+    </div>
 </div>
 
-<div th:unless="${cartEmpty}">
-    <table>
-        <thead>
-        <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Price</th>
-            <!-- Add more columns as needed -->
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="book : ${cartItems}">
-            <td th:text="${book.title}"></td>
-            <td th:text="${book.author}"></td>
-            <td th:text="${book.price}"></td>
-            <!-- Add more columns as needed -->
-        </tr>
-        </tbody>
-    </table>
-</div>
-
-<a href="/">Continue Shopping</a>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
