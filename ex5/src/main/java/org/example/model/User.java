@@ -31,13 +31,13 @@ public class User {
     @Email(message = "Email should be valid")
     private String email;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(
             name = "user_cart",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "book_id")
     )
-    private List<Books> cartItems = new ArrayList<>();
+    private final List<Books> cartItems = new ArrayList<>();
 
     public User() {
         // Default constructor required by JPA
@@ -87,8 +87,8 @@ public class User {
         return cartItems;
     }
 
-    public void setCartItems(List<Books> cartItems) {
-        this.cartItems = cartItems;
+    public void addCartItem(Books book) {
+        this.cartItems.add(book);
     }
 
     // toString() method (optional but recommended for logging and debugging)

@@ -24,7 +24,7 @@
                         <h5 class="card-title" th:text="${book.title}"></h5>
                         <p class="card-text">Author: <span th:text="${book.author}"></span></p>
                         <p class="card-text">Price: $<span th:text="${book.price}"></span></p>
-                        <p class="card-text">Type: <span th:text="${book.type}"></span></p>
+                        <!-- Add type field if needed -->
                         <form th:action="@{/cart/remove/{id}(id=${book.id})}" method="post">
                             <button type="submit" class="btn btn-danger">Remove from Cart</button>
                         </form>
@@ -39,6 +39,7 @@
 
         <div class="mt-4">
             <a href="/" class="btn btn-primary">Continue Shopping</a>
+            <a href="/checkout" class="btn btn-success">Proceed to Checkout</a>
         </div>
     </div>
 </div>

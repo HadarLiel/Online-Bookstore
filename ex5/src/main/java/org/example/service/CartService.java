@@ -6,7 +6,6 @@ import org.example.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
 import java.util.Collections;
 import java.util.List;
 
@@ -43,5 +42,4 @@ public class CartService {
             userRepository.save(user);
         }
     }
-    // Add more methods as needed (e.g., removeFromCart, clearCart)
 }
