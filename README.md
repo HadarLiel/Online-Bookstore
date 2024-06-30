@@ -93,3 +93,6 @@ The following data is managed using session storage:
     - Total price of items in the cart
 
 
+## Video: ##
+### Link to the presentation: ###
+https://drive.google.com/file/d/1_F-psCJkjp8lKhaBgctWkuNRxki1z9UV/view?usp=sharing
