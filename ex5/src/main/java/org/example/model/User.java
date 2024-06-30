@@ -39,10 +39,19 @@ public class User {
     )
     private final List<Books> cartItems = new ArrayList<>();
 
+    /**
+     * Default constructor required by JPA
+     */
     public User() {
         // Default constructor required by JPA
     }
 
+    /**
+     * Constructor with parameters
+     * @param username The user's username
+     * @param password The user's password
+     * @param email The user's email address
+     */
     public User(String username, String password, String email) {
         this.username = username;
         this.password = password;
@@ -91,8 +100,10 @@ public class User {
         this.cartItems.add(book);
     }
 
-    // toString() method (optional but recommended for logging and debugging)
-
+    /**
+     * Returns a string representation of the User object
+     * @return A string representation of the User
+     */
     @Override
     public String toString() {
         return "User{" +

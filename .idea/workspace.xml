@@ -5,10 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50609bc9-6396-4cff-9f6c-2942ee5de79a" name="Changes" comment="add cart save in db">
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/resources/static/images/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/resources/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/PasswordEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/PasswordEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Books.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/java/org/example/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/src/main/java/org/example/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/src/main/resources/templates/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/PasswordEncoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/CartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/model/Books.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/model/Books.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/model/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/model/Cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/org/example/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/org/example/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/templates/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex5/target/classes/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/ex5/target/classes/templates/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +146,7 @@
       <workItem from="1719399471955" duration="3651000" />
       <workItem from="1719404136703" duration="4706000" />
       <workItem from="1719412931203" duration="321000" />
+      <workItem from="1719741797731" duration="1931000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />
