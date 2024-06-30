@@ -45,32 +45,93 @@ public class BookService {
     public void initData() {
 
         // Existing books
-        Books book1 = new Books("The No Show", "TheNoShow.png", "unknown", 50.00, 2020, 10, "This is a sample description for book1.", "Fiction");
+        Books book1 = new Books("The No Show",
+                "TheNoShow.png",
+                "Beth Oleary",
+                50.00,
+                2020,
+                10,
+                "This is a sample description for The No show.",
+                "Fiction");
         bookRepository.save(book1);
 
-        Books book2 = new Books("Diary Of A Wimpy Kid", "DiaryOfAWimpyKid.png", "Jeff Kinney", 18.00, 2007, 40, "This is a sample description for Diary Of A Wimpy Kid.", "Children");
+        Books book2 = new Books("Diary Of A Wimpy Kid",
+                "DiaryOfAWimpyKid.png",
+                "Jeff Kinney", 18.00,
+                2007,
+                40,
+                "This is a sample description for Diary Of A Wimpy Kid.",
+                "Children");
         bookRepository.save(book2);
 
         // New books to add
-        Books book3 = new Books("Book Lovers", "bookLovers.png", "Unknown", 35.00, 2021, 15, "This is a sample description for Book Lovers.", "Romance");
+        Books book3 = new Books("Book Lovers",
+                "bookLovers.png",
+                "Emily Henry",
+                35.00,
+                2021,
+                15,
+                "This is a sample description for Book Lovers.",
+                "Romance");
         bookRepository.save(book3);
 
-        Books book4 = new Books("Rule Book", "ruleBook.png", "Manual Writer", 25.00, 2018, 30, "This is a sample description for Rule Book.", "Manual");
+        Books book4 = new Books("Rule Book",
+                "ruleBook.png",
+                "Manual Writer",
+                25.00,
+                2018,
+                30,
+                "This is a sample description for Rule Book.",
+                "Manual");
         bookRepository.save(book4);
 
-        Books book5 = new Books("Dracula", "dracula.png", "Bram Stoker", 15.00, 1897, 5, "This is a sample description for Dracula.", "Horror");
+        Books book5 = new Books("Dracula",
+                "dracula.png",
+                "Bram Stoker",
+                15.00,
+                1897,
+                5,
+                "This is a sample description for Dracula.",
+                "Horror");
         bookRepository.save(book5);
 
-        Books book6 = new Books("Do Over", "doOver.png", "Jon Acuff", 20.00, 2017, 25, "This is a sample description for Do Over.", "Self-Help");
+        Books book6 = new Books("Do Over",
+                "doOver.png",
+                "Jon Acuff",
+                20.00,
+                2017,
+                25,
+                "This is a sample description for Do Over.",
+                "Self-Help");
         bookRepository.save(book6);
 
-        Books book7 = new Books("A Tale Of Five Balloons", "ATaleOfFiveBalloons.png", "Wale Ayeni", 12.00, 2023, 8, "This is a sample description for A Tale Of Five Balloons.", "Children");
+        Books book7 = new Books("A Tale Of Five Balloons",
+                "ATaleOfFiveBalloons.png",
+                "Wale Ayeni",
+                12.00,
+                2023,
+                8,
+                "This is a sample description for A Tale Of Five Balloons.",
+                "Children");
         bookRepository.save(book7);
 
-        Books book8 = new Books("Harry Potter", "harryPotter.png", "J.K. Rowling", 40.00, 1997, 50, "This is a sample description for Harry Potter.", "Fantasy");
+        Books book8 = new Books("Harry Potter",
+                "harryPotter.png",
+                "J.K. Rowling",
+                40.00,
+                1997,
+                50,
+                "This is a sample description for Harry Potter.",
+                "Fantasy");
         bookRepository.save(book8);
 
-        Books book9 = new Books("Room For Rent", "roomForRent.png", "Unknown", 30.00, 2022, 12, "This is a sample description for Room For Rent.", "Thriller");
+        Books book9 = new Books("Room For Rent",
+                "roomForRent.png",
+                "Lea Goldberg", 30.00,
+                2022,
+                12,
+                "This is a sample description for Room For Rent.",
+                "Thriller");
         bookRepository.save(book9);
     }
 
@@ -88,4 +149,5 @@ public class BookService {
 
     public List<String> getAllBookTypes() {
         return bookRepository.findDistinctTypes();
-    }}
+    }
+}
